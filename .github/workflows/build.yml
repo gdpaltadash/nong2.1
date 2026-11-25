@@ -46,6 +46,10 @@ jobs:
       - name: Compilar
         run: cmake --build build --config RelWithDebInfo
 
+      - name: Comprobar que la DLL es de 32 bits
+        shell: pwsh
+        run: dumpbin /headers build/user.nong21.dll | Select-String "machine"
+
       - uses: actions/upload-artifact@v4
         with:
           name: nong21
