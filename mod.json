@@ -1,0 +1,11 @@
+{
+    "geode": "1.3.10",
+    "version": "v0.1.0",
+    "id": "user.nong21",
+    "name": "NONG 2.1",
+    "developer": "User",
+    "description": "Cambia la cancion de un nivel por un archivo local o una URL (GD 2.113)",
+    "gd": {
+        "win": "2.113"
+    }
+}
