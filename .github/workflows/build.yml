@@ -1,0 +1,18 @@
+name: Build
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: v1.3.10
+          combine: false
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nong21
+          path: build/*.geode
